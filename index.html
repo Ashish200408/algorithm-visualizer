@@ -4,14 +4,57 @@
         <title>Algorithm Visualizer</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+<body>
         <h1>Algorithm Visualizer</h1>
 
+        <p class="subtitle">
+        Visualize how algorithms work step-by-step.
+        </p>
+
+        <h2>Controls</h2>
+    <div class="controls">
         <button onclick="generateArray()">Generate Array</button>
         <button onclick="bubbleSort()">Bubble Sort</button>
+        <button onclick="selectionSort()">Selection Sort</button>
+        <button onclick="startMergeSort()">Merge Sort</button>
 
+        <br><br>
+
+        <input type="number" id="searchValue" placeholder="Enter value">
+        <button onclick="linearSearch()">Linear Search</button>
+        <button onclick="binarySearch()">Binary Search</button>
+
+        <br><br>
+
+        <div class="stats">
+        <span>Comparisons: <b id="comparisons">0</b></span>
+        <span>Swaps: <b id="swaps">0</b></span>
+        </div>
+        
+        <br><br>
+
+        <label>Speed:</label>
+        <input type="range" min="10" max="500" value="100" id="speedSlider">
+        <span id="speedValue">100 ms</span>
+
+        <br><br>
+
+        <label>Array Size:</label>
+        <input type="range" min="5" max="60" value="20" id="sizeSlider">
+        <span id="sizeValue">20</span>
+        </div>
+
+        <h2>Visualization</h2>
         <div id="array-container"></div>
 
+        <h2>How Sorting Works</h2>
+
+        <p>🔵 Normal | 🔴 Comparing | 🟢 Found | 🟡 Selected</p>
+
+        <div class="notes" id="notes">
+        <p>Select an algorithm to see its explanation.</p>
+        </div>
+
         <script src="script.js"></script>
-    </body>
+</body>
 </html>
